@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+        .side {
+            color: #fdfdfd;
+            background: #f19ceb;
+            width: 450px;
+            height:700px;
+            margin-right : 0px;
+            float: left;
+        }
+</style>
+  <meta charset="UTF-8">
+  <title>[HTML5] QRCode Reader</title>
+</head>
+<body>
+<div id="nekopv">
+  <img id="src" src="" alt="">
+</div>
+
+  <div class="side" id="side">
+    <p>お名前：<input type="text" id="name" name="namae" value="ma" size="20" /></p>
+
+    <p>：like
+    <input type="text" id="strawberry" /> いちご
+    <input type="text" name="OS" id="milk"  /> みるく
+    <input type="text" name="OS" id="strawberry-milk" /> いちごおれ
+    </p>
+    <p><input type="submit" name="submit" value="送信" onclick="addValue()" /></p>
+
+  </div>
+  <script  type="text/javascript">　
+    {
+        "use strict";
+        function addValue(){
+          var idname = "neko";
+          var s = document.getElementById("name").value;
+          var s1 = document.getElementById("strawberry").value;
+          var s2 = document.getElementById("milk").value;
+          var s3 = document.getElementById("strawberry-milk").value;
+          var src = document.getElementById("src");
+          var pvname =idname + "pv";
+          const str = s + s1 + s2 + s3;
+          src.src = "http://chart.apis.google.com/chart?chs=200x200&cht=qr&chl="+str;
+          console.log(str);
+          var side = document.getElementById("side");
+          side.style.display ='none';
+        }
+    }
+</script>
+</body>
+</html>
