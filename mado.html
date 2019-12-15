@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+        .side {
+            color: #fdfdfd;
+            background: #f19ceb;
+            width: 450px;
+            height:700px;
+            margin-right : 0px;
+            float: left;
+        }
+</style>
+  <meta charset="UTF-8">
+  <title>[HTML5] QRCode Reader2</title>
+</head>
+<body>
+
+
+<script  type="text/javascript">　
+  var test1 = decodeURIComponent(location.search.match(/strawberry=(.*?)(&|$)/)[1]);
+  document.write(test1);
+
+  /*URLの中から変数名をさがしてその変数値を持って来ているはてな以降を宣言してます*/
+  /*strawberryを参照してます*/
+
+
+  var test2 = decodeURIComponent(location.search.match(/milk=(.*?)(&|$)/)[1]);
+  document.write(test2);
+
+  
+  var test3 = decodeURIComponent(location.search.match(/strawberry-milk=(.*?)(&|$)/)[1]);
+  document.write(test3);
+
+</script>
+</body>
+</html>
